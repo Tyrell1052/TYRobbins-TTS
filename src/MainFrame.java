@@ -5,6 +5,8 @@ import javax.swing.*;
 
 public class MainFrame extends JFrame {
 
+    private DetailsPanel detailsPanel;
+
     public MainFrame(String title){
 
         super(title);
@@ -15,23 +17,25 @@ public class MainFrame extends JFrame {
 
         // Create Components
         final JTextArea textArea = new JTextArea();
-        JButton button = new JButton("Click me!");
+        final JButton imageArea = new JButton();
+
+
+
+        detailsPanel = new DetailsPanel();
 
         // Add Components
         Container component = getContentPane();
 
         component.add(textArea, BorderLayout.CENTER);
-        component.add(button, BorderLayout.SOUTH);
+        component.add(detailsPanel, BorderLayout.WEST);
+        component.add(imageArea, BorderLayout.SOUTH);
 
 
-        // Create Component Behaviour
-        button.addActionListener(new AbstractAction() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                textArea.append("Hello\n");
-            }
-        });
+//       // JButton imageOne = new JButton();
+//        imageOne.setIcon(new ImageIcon("kitten.jpg"));
+//        imageOne.add(imageOne);
+//        add(imageOne);
+//        validate();
 
 
 
