@@ -25,5 +25,6 @@ public class MainFrame extends JFrame {//
 
         component.add(detailsPanel, BorderLayout.CENTER);
 
+
     }//end MainFrameMethod
 }//end MainFrameClass
