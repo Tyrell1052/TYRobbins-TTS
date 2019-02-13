@@ -25,10 +25,8 @@ public class MainFrame extends JFrame {
         // Add Components
         Container component = getContentPane();
 
-        //component.add(textArea, BorderLayout.CENTER);
-        component.add(detailsPanel, BorderLayout.CENTER);
-        //component.add(imageArea, BorderLayout.SOUTH);
 
+        component.add(detailsPanel, BorderLayout.CENTER);
 
 
     }//end MainFrameMethod
