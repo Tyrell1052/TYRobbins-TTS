@@ -16,7 +16,6 @@ public class MainFrame extends JFrame {
 
 
         // Create Components
-        final JTextArea textArea = new JTextArea();
         final JButton imageArea = new JButton();
 
 
@@ -26,17 +25,9 @@ public class MainFrame extends JFrame {
         // Add Components
         Container component = getContentPane();
 
-        component.add(textArea, BorderLayout.CENTER);
-        component.add(detailsPanel, BorderLayout.WEST);
-        component.add(imageArea, BorderLayout.SOUTH);
-
-
-//       // JButton imageOne = new JButton();
-//        imageOne.setIcon(new ImageIcon("kitten.jpg"));
-//        imageOne.add(imageOne);
-//        add(imageOne);
-//        validate();
-
+        //component.add(textArea, BorderLayout.CENTER);
+        component.add(detailsPanel, BorderLayout.CENTER);
+        //component.add(imageArea, BorderLayout.SOUTH);
 
 
 
