@@ -19,7 +19,6 @@ public class MainFrame extends JFrame {
         final JButton imageArea = new JButton();
 
 
-
         detailsPanel = new DetailsPanel();
 
         // Add Components

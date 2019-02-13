@@ -1,5 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import com.sun.speech.freetts.Voice;
+import com.sun.speech.freetts.VoiceManager;
 
 public class DetailsPanel extends JPanel {
     public DetailsPanel(){
@@ -8,14 +12,44 @@ public class DetailsPanel extends JPanel {
         size.width = (3000);
         setPreferredSize(size);
 
-        // first button with an image
+        // instantiate a Voice object named voice
+        Voice voice;
+
+        // set up a Voicemanager object and use it to link voice with a particular voice
+        VoiceManager voiceManager = VoiceManager.getInstance();
+        voice = voiceManager.getVoice("kevin16");
+
+        // load the selected voice
+        voice.allocate();
+
+        // button with an image
         ImageIcon imageOne = new ImageIcon("Hulk.jpg");
         JButton buttonOne = new JButton(imageOne);
         buttonOne.setPreferredSize(new Dimension(480, 360));
+        buttonOne.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // set up a variable for the text to be read
+
+            String text = "That’s my secret, Captain: I’m always angry.";
+
+            // begin speaking the text
+            voice.speak(text);
+        }
+        });
 
         ImageIcon imageTwo = new ImageIcon("Groot.jpg");
         JButton buttonTwo = new JButton(imageTwo);
         buttonTwo.setPreferredSize(new Dimension(473,709));
+        buttonTwo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            String text = "I am Groot";
+
+            voice.speak(text);
+            }
+        });
 
         ImageIcon imageThree = new ImageIcon("Gandalf.jpg");
         JButton buttonThree = new JButton(imageThree);

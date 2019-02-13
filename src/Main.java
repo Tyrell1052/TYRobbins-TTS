@@ -38,11 +38,9 @@ public class Main {
 //
 //        // begin speaking the text
 //        voice.speak(text);
-
+//
 
         
     }// end main
 
 }///end main class
-
-
